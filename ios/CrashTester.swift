@@ -1,8 +1,8 @@
 @objc(CrashTester)
 class CrashTester: NSObject {
 
-    @objc(multiply:withB:withResolver:withRejecter:)
-    func multiply(a: Float, b: Float, resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) -> Void {
-        resolve(a*b)
+    @objc(nativeCrash:)
+    func nativeCrash(_ message: String = "") -> Void {
+        fatalError(message)
     }
 }
