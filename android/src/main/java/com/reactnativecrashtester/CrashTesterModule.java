@@ -1,8 +1,9 @@
 package com.reactnativecrashtester;
 
+import android.os.Handler;
+
 import androidx.annotation.NonNull;
 
-import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
@@ -23,9 +24,12 @@ public class CrashTesterModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void nativeCrash() {
+    public void nativeCrash(String message) {
         new Handler().postDelayed(() -> {
-            throw new RuntimeException("Test Crash (Android)")
+          if (message.isEmpty()) {
+            throw new RuntimeException();
+          }
+          throw new RuntimeException(message);
         }, 50);
     }
 }
