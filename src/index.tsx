@@ -1,9 +1,14 @@
 import { NativeModules } from 'react-native';
 
-type CrashTesterType = {
-  nativeCrash(): void;
+const { CrashTester: NativeModule } = NativeModules;
+
+const CrashTester = {
+  nativeCrash(message = '') {
+    NativeModule.nativeCrash(message);
+  },
+  jsCrash(message?: string) {
+    throw new Error(message);
+  },
 };
 
-const { CrashTester } = NativeModules;
-
-export default CrashTester as CrashTesterType;
+export default CrashTester;
