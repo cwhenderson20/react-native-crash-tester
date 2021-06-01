@@ -1,18 +1,11 @@
 import * as React from 'react';
-
-import { StyleSheet, View, Text } from 'react-native';
+import { Button, StyleSheet, View } from 'react-native';
 import CrashTester from 'react-native-crash-tester';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    CrashTester.multiply(3, 7).then(setResult);
-  }, []);
-
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Button onPress={() => CrashTester.nativeCrash()} title="Native crash" />
     </View>
   );
 }
@@ -22,10 +15,5 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
   },
 });

@@ -22,13 +22,10 @@ public class CrashTesterModule extends ReactContextBaseJavaModule {
         return NAME;
     }
 
-
-    // Example method
-    // See https://reactnative.dev/docs/native-modules-android
     @ReactMethod
-    public void multiply(int a, int b, Promise promise) {
-        promise.resolve(a * b);
+    public void nativeCrash() {
+        new Handler().postDelayed(() -> {
+            throw new RuntimeException("Test Crash (Android)")
+        }, 50);
     }
-
-    public static native int nativeMultiply(int a, int b);
 }

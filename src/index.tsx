@@ -1,7 +1,7 @@
 import { NativeModules } from 'react-native';
 
 type CrashTesterType = {
-  multiply(a: number, b: number): Promise<number>;
+  nativeCrash(): void;
 };
 
 const { CrashTester } = NativeModules;
