@@ -12,3 +12,4 @@ const CrashTester = {
 };
 
 export default CrashTester;
+export { default as CrashingComponent } from './CrashingComponent';
