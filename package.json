@@ -1,6 +1,6 @@
 {
   "name": "react-native-crash-tester",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Deliberately crash your app. Good for testing crash reporting services.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
