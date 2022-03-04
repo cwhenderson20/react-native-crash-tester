@@ -18,14 +18,13 @@ def safeExtGet(prop, fallback) {
 }
 
 android {
-    compileSdkVersion safeExtGet('CrashTester_compileSdkVersion', 29)
-    buildToolsVersion safeExtGet('CrashTester_buildToolsVersion', '29.0.3')
+    compileSdkVersion safeExtGet('CrashTester_compileSdkVersion', 30)
+    buildToolsVersion safeExtGet('CrashTester_buildToolsVersion', '30.0.2')
     defaultConfig {
         minSdkVersion safeExtGet('CrashTester_minSdkVersion', 21)
-        targetSdkVersion safeExtGet('CrashTester_targetSdkVersion', 29)
+        targetSdkVersion safeExtGet('CrashTester_targetSdkVersion', 30)
         versionCode 1
         versionName "1.0"
-
     }
 
     buildTypes {
