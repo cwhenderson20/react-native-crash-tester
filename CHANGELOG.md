@@ -1,3 +1,10 @@
+## [0.2.2](https://github.com/cwhenderson20/react-native-crash-tester/compare/v0.2.1...v0.2.2) (2022-03-04)
+
+
+### Bug Fixes
+
+* set requiresMainQueueSetup to false ([29d4bd0](https://github.com/cwhenderson20/react-native-crash-tester/commit/29d4bd09a816da74f087f6eadd88a75336bc69c9)), closes [#1](https://github.com/cwhenderson20/react-native-crash-tester/issues/1)
+
 ## [0.2.1](https://github.com/cwhenderson20/react-native-crash-tester/compare/v0.2.0...v0.2.1) (2021-06-02)
 
 
