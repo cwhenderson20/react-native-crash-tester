@@ -1,3 +1,10 @@
+## [0.2.3](https://github.com/cwhenderson20/react-native-crash-tester/compare/v0.2.2...v0.2.3) (2022-11-03)
+
+
+### Bug Fixes
+
+* replace jCenter with mavenCentral ([22e8abc](https://github.com/cwhenderson20/react-native-crash-tester/commit/22e8abc18e81dbf1b0548aed0faa7f624b36a349))
+
 ## [0.2.2](https://github.com/cwhenderson20/react-native-crash-tester/compare/v0.2.1...v0.2.2) (2022-03-04)
 
 
