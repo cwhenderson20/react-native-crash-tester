@@ -32,4 +32,14 @@ public class CrashTesterModule extends ReactContextBaseJavaModule {
           throw new RuntimeException(message);
         }, 50);
     }
+
+    @ReactMethod
+    public void nativeException(String message) {
+        new Handler().postDelayed(() -> {
+          if (message.isEmpty()) {
+            throw new RuntimeException();
+          }
+          throw new RuntimeException(message);
+        }, 50);
+    }
 }
