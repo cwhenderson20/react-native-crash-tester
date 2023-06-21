@@ -6,6 +6,9 @@ const CrashTester = {
   nativeCrash(message = '') {
     NativeModule.nativeCrash(message);
   },
+  nativeException(message = '') {
+    NativeModule.nativeException(message);
+  },
   jsCrash(message?: string) {
     throw new Error(message);
   },
